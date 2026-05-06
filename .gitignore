@@ -6,3 +6,6 @@
 # 기타
 node_modules/
 .DS_Store
+
+.vercel
+.env*.local

@@ -1,5 +1,4 @@
-export default async function handler(req, res) {
-  // CORS 허용
+module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
 
@@ -18,4 +17,4 @@ export default async function handler(req, res) {
   } catch (error) {
     return res.status(500).json({ error: '장르 데이터를 가져오는데 실패했습니다.' });
   }
-}
+};
