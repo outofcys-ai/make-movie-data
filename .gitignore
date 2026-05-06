@@ -1,0 +1,8 @@
+# 환경변수 파일 - GitHub에 절대 올리지 않음
+.env
+.env.local
+.env.production
+
+# 기타
+node_modules/
+.DS_Store

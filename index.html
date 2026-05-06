@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CINEMAX — 지금 상영 중</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;700&family=DM+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo">CINE<span>MAX</span></div>
+  <div class="nav-right">
+    <div class="nav-indicator"></div>
+    <span class="nav-badge">지금 상영 중</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div id="hero-bg"></div>
+  <div id="hero-content">
+    <div class="hero-tag">지금 상영 중 — NOW PLAYING</div>
+    <div id="hero-title">로딩 중...</div>
+    <div id="hero-meta"></div>
+    <div id="hero-overview"></div>
+    <div class="hero-btns">
+      <button class="btn-play" id="hero-play-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+        상세 정보
+      </button>
+      <button class="btn-info" id="hero-info-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="2"/><line x1="12" y1="16" x2="12.01" y2="16" stroke="currentColor" stroke-width="3"/></svg>
+        더 보기
+      </button>
+    </div>
+  </div>
+  <div id="hero-dots"></div>
+</section>
+
+<!-- STATS BAR -->
+<div id="stats-bar">
+  <div class="stat-item">
+    <div class="stat-label">총 영화 수</div>
+    <div class="stat-val" id="stat-total">—</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-label">평균 평점</div>
+    <div class="stat-val" id="stat-avg-score">—<span>/ 10</span></div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-label">총 평가 수</div>
+    <div class="stat-val" id="stat-total-votes">—</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-label">평균 인기도</div>
+    <div class="stat-val" id="stat-avg-pop">—</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-label">페이지</div>
+    <div class="stat-val" id="stat-page">—<span>/ 총 페이지</span></div>
+  </div>
+</div>
+
+<!-- MOVIES SECTION -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-title">현재 상영작</div>
+    <div class="section-count" id="section-count"></div>
+  </div>
+  <div id="loading">
+    <div class="loader"></div>
+    <div class="loader-text">영화 불러오는 중...</div>
+  </div>
+  <div id="movie-grid" style="display:none;"></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">CINEMAX</div>
+  <div>TMDB API · now_playing · 데이터 제공: The Movie Database</div>
+</footer>
+
+<!-- MODAL -->
+<div id="modal-bg">
+  <div id="modal">
+    <button id="modal-close">✕</button>
+    <div class="modal-backdrop-overlay">
+      <img id="modal-backdrop" src="" alt="" />
+    </div>
+    <div id="modal-body">
+      <div id="modal-title"></div>
+      <div id="modal-original-title"></div>
+      <div class="modal-chips" id="modal-chips"></div>
+      <div id="modal-overview"></div>
+      <div class="modal-stats" id="modal-stats"></div>
+      <div class="modal-ids" id="modal-ids"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
